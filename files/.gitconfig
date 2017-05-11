@@ -1,0 +1,24 @@
+[user]
+  name = Jonathan Goodman
+  email = jonathanalbangoodman@gmail.com
+[push]
+  default = current
+[filter "lfs"]
+  clean = git lfs clean %f
+  smudge = git lfs smudge %f
+  required = true
+[core]
+  filemode = false
+[credential]
+  helper = osxkeychain
+[commit]
+  template = ~/.gitmessage
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[alias]
+  bam     = "!source ~/.githelpers && delete_local_merged_branches"
+  bamr    = "!source ~/.githelpers && delete_remote_merged_branches"
+  cb      = "rev-parse --abbrev-ref HEAD"
+
