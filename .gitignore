@@ -1,5 +1,5 @@
 .DS_Store
 **/.DS_Store
-files/.aliases
-files/.aliases.local
+files/.aliases.private
+files/.env.private
 

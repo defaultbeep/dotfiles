@@ -2,9 +2,6 @@ for function in ~/.zsh/functions/*; do
   source $function
 done
 
-[[ -f ~/.env ]] && source ~/.env
-[[ -f ~/.aliases ]] && source ~/.aliases
-
 export PATH="~/.composer/vendor/bin:$PATH" # composer
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # homebrew
 export PATH="$HOME/.bin:$PATH" # rbenv
@@ -50,4 +47,8 @@ setopt extendedglob
 unsetopt nomatch
 DIRSTACKSIZE=10
 
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.env.local ]] && source ~/.env.local
+[[ -f ~/.env.private ]] && source ~/.env.private
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+[[ -f ~/.aliases.private ]] && source ~/.aliases.private
+
