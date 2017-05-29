@@ -1,2 +1,4 @@
 alias ST='~/ST/'
 alias DFL='~/ST/dotfiles'
+alias NS='npm start'
+alias OA='vim .aliases.local'
