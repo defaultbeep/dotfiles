@@ -21,4 +21,5 @@
   bam     = "!source ~/.githelpers && delete_local_merged_branches"
   bamr    = "!source ~/.githelpers && delete_remote_merged_branches"
   cb      = "rev-parse --abbrev-ref HEAD"
+  s       = "status"
 
