@@ -5,6 +5,7 @@ done
 export PATH="~/.composer/vendor/bin:$PATH" # composer
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # homebrew
 export PATH="$HOME/.bin:$PATH" # rbenv
+export PATH="$PATH:$HOME/Library/Python/2.7/bin/"
 
 eval "$(rbenv init - --no-rehash zsh)"
 
