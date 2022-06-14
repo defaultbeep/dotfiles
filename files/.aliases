@@ -1,0 +1,8 @@
+alias la='list_aliases'
+alias ua='vim "$DOTFILES_FOLDER"/files/.aliases'
+alias upa='vim "~/.aliases.private'
+alias ue='vim "$DOTFILES_FOLDER"/files/.env'
+alias upe='vim "~/.env.private'
+alias s='source ~/.zshrc'
+alias c='clear'
+alias x='exit'

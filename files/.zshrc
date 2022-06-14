@@ -1,20 +1,14 @@
-for function in ~/.zsh/functions/*; do
-  source $function
-done
-
-export PATH="~/.composer/vendor/bin:$PATH" # composer
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # homebrew
-export PATH="$HOME/.bin:$PATH" # rbenv
-export PATH="$PATH:$HOME/Library/Python/2.7/bin/"
-
-eval "$(rbenv init - --no-rehash zsh)"
-
-# colors
+# Enable colours
 autoload -U colors
 colors
 export CLICOLOR=1
 
-# prompt
+# Import handy functions
+for filename in ~/.zsh/functions/*; do
+  source $filename
+done
+
+# Customise prompt
 setopt promptsubst
 
 prompt_path() {
@@ -28,19 +22,19 @@ git_prompt_info() {
   fi
 }
 
-PS1='* $(prompt_path) $(git_prompt_info)~ '
+PS1='* $(prompt_path) $(git_prompt_info) ~ '
 
-# set editor
+# Set NVM dir
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# Set editor
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-# history config
-setopt hist_ignore_all_dups inc_append_history
-HISTFILE=~/.zhistory
-HISTSIZE=4096
-SAVEHIST=4096
-
-# auto complete
+# Set autocomplete
 autoload -U compinit
 compinit
 setopt autocd autopushd pushdminus pushdsilent pushdtohome cdablevars
@@ -48,8 +42,10 @@ setopt extendedglob
 unsetopt nomatch
 DIRSTACKSIZE=10
 
-[[ -f ~/.env.local ]] && source ~/.env.local
+# Set Environment Variables
+[[ -f ~/.env ]] && source ~/.env
 [[ -f ~/.env.private ]] && source ~/.env.private
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
-[[ -f ~/.aliases.private ]] && source ~/.aliases.private
 
+# Set aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases.private ]] && source ~/.aliases.private

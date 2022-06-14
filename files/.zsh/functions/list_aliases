@@ -1,0 +1,4 @@
+list_aliases() {
+  tail -n 100 ~/.aliases
+  tail -n 100 ~/.aliases.private
+}

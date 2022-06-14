@@ -1,9 +1,0 @@
-alias ST='~/ST/'
-alias DFL='~/dotfiles'
-alias NS='npm start'
-alias OA='vim .aliases.local'
-alias OAP='vim .aliases.private'
-alias ENV='vim .env.local'
-alias C='clear'
-alias X='exit'
-
