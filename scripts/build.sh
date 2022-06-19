@@ -1,7 +1,9 @@
-while IFS="" read -r p || [ -n "$p" ]
-do
-  rm -rf ~/"$p"
-done < logs/files.txt
+if [ -f logs/files.txt ]; then
+  while IFS="" read -r p || [ -n "$p" ]
+  do
+    rm -rf ~/"$p"
+  done < logs/files.txt
+fi
 
 cp -r files/. ~/.
 
@@ -11,11 +13,11 @@ rm -f ~/.profile
 echo "export DOTFILES_FOLDER="$(pwd) > ~/.env
 
 if [ ! -f ~/.aliases.private ]; then
-    echo "# Your private aliases" > ~/.aliases.private
+  echo "# Your private aliases" > ~/.aliases.private
 fi
 
 if [ ! -f ~/.env.private ]; then
-    echo "# Your private env vars" > ~/.env.private
+  echo "# Your private env vars" > ~/.env.private
 fi
 
 ls -A files > logs/files.txt
