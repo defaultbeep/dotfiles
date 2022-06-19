@@ -1,3 +1,8 @@
+while IFS="" read -r p || [ -n "$p" ]
+do
+  rm -rf ~/"$p"
+done < logs/files.txt
+
 cp -r files/. ~/.
 
 rm -f ~/.bash_profile
