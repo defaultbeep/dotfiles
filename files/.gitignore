@@ -3,6 +3,8 @@
 .bundle
 .byebug_history
 .env
+.env.private
+.aliases.private
 db/*.sqlite3
 log/*.log
 rerun.txt
