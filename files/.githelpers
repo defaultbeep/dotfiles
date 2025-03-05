@@ -1,16 +1,16 @@
 #!/bin/bash
 
 function delete_local_merged_branches() {
-  git branch --merged mainline | grep -v mainline | xargs git branch -d
+  git branch --merged main | grep -v main | xargs git branch -d
 }
 
 function delete_remote_merged_branches() {
   git fetch origin
   git remote prune origin
 
-  for BRANCH in `git branch -r --merged origin/mainline |\
-                 egrep "^\s*origin/"                  |\
-                 grep -v mainline                       |\
+  for BRANCH in `git branch -r --merged origin/main |\
+                 egrep "^\s*origin/"                |\
+                 grep -v main                       |\
                  cut -d/ -f2-`
   do
     git push origin :$BRANCH

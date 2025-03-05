@@ -1,0 +1,13 @@
+update_dotfiles() {
+  current_path=$PWD
+  cd $DOTFILES_FOLDER
+  source scripts/init.sh
+  cd $current_path
+}
+
+clear_dotfiles() {
+  current_path=$PWD
+  cd $DOTFILES_FOLDER
+  source scripts/clear.sh
+  cd $current_path
+}

@@ -63,6 +63,10 @@ setopt extendedglob
 unsetopt nomatch
 DIRSTACKSIZE=10
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Set Environment Variables
 [[ -f ~/.env ]] && source ~/.env
 [[ -f ~/.env.private ]] && source ~/.env.private

@@ -1,22 +1,25 @@
 👾
 
-# What / Why 
-1. Sharing my dotfiles
-2. Making it easy to move from machine to machine
+# What / Why
+
+Dotfiles are hidden files that configure various aspects of your terminal
+
+This repo makes it easy for me maintain consistency moving from one machine to another
 
 # To set up
 
-1. Clone the repo 
-2. Run `sh scripts/build.sh`
-3. Restart your terminal windows
+1. Clone the repo
+2. Navigate to `dotfiles/`
+3. Run `sh scripts/init.sh`
+4. Re-open your terminal
 
 # To update
 
-1. Make your changes within the files directory
-2. Run `sh scripts/build.sh`
-3. Restart your terminal windows
+1. Make changes in `dotfiles/files`
+2. Run `update_dotfiles` or `udf`
+3. Re-open your terminal
 
-# To clean up
+# To clear (remove)
 
-1. Run `sh scripts/clean.sh`
-2. Restart your terminal windows
+1. Run `clear_dotfiles` or `cdf`
+2. Re-open your terminal

@@ -6,6 +6,7 @@
   required = true
 [core]
   filemode = false
+  excludesfile = /Users/jonathangoodman/.gitignore_global
 [credential]
   helper = osxkeychain
 [commit]

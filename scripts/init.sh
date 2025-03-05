@@ -1,3 +1,11 @@
+current_dir=$(basename "$PWD")
+
+if [[ "$current_dir" != "dotfiles" ]]; then
+
+  echo "\n\n👾 Move to your dotfiles directory and run this again\n\n"
+  kill -9 $PPID
+fi
+
 if [ -f logs/files.txt ]; then
   while IFS="" read -r p || [ -n "$p" ]
   do
@@ -23,4 +31,8 @@ fi
 ls -A files > logs/files.txt
 echo $(date) > logs/last_update.txt
 
-echo "\n\n👾 Please restart your terminals\n\n"
+
+echo "\n\n👾 Done! Terminal will quit 2 seconds\n\n"
+sleep 2
+
+kill -9 $PPID
