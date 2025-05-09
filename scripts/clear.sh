@@ -6,7 +6,6 @@ do
   rm -rf ~/"$p"
 done < logs/files.txt
 
-echo "\n\n👾 Done! Terminal will quit 2 seconds\n\n"
-sleep 2
 
-kill -9 $PPID
+
+echo "\n\n👾 Done! Restart your terminal \n\n"

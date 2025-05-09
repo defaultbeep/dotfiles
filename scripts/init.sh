@@ -1,9 +1,10 @@
 current_dir=$(basename "$PWD")
 
-if [[ "$current_dir" != "dotfiles" ]]; then
+echo "\n\n"
 
-  echo "\n\n👾 Move to your dotfiles directory and run this again\n\n"
-  kill -9 $PPID
+if [[ "$current_dir" != "dotfiles" ]]; then
+  echo "\n\n‼️  Move to your dotfiles directory and run this again\n\n"
+  exit 1;
 fi
 
 if [ -f logs/files.txt ]; then
@@ -28,11 +29,12 @@ if [ ! -f ~/.env.private ]; then
   echo "# Your private env vars" > ~/.env.private
 fi
 
+echo "\n\n"
+
+# brew bundle --file=~/Brewfile
+
 ls -A files > logs/files.txt
 echo $(date) > logs/last_update.txt
 
 
-echo "\n\n👾 Done! Terminal will quit 2 seconds\n\n"
-sleep 2
-
-kill -9 $PPID
+echo "\n\n👾 Done! Restart your terminal (Run brew bundle if required)\n\n"
