@@ -5,7 +5,4 @@ do
   echo "removing $p"
   rm -rf ~/"$p"
 done < logs/files.txt
-
-
-
-echo "\n\n👾 Done! Restart your terminal \n\n"
+echo "👾 Done! Restart your terminal"
