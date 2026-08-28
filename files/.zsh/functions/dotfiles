@@ -1,6 +1,7 @@
 update_dotfiles() {
   current_path=$PWD
   cd $DOTFILES_FOLDER
+  echo "✨ Updating now (Last updated $(time_since_update))"
   source scripts/init.sh
   cd $current_path
 }
@@ -10,4 +11,44 @@ clear_dotfiles() {
   cd $DOTFILES_FOLDER
   source scripts/clear.sh
   cd $current_path
+}
+
+plural() {
+  (( $1 == 1 )) && echo "$1 $2" || echo "$1 ${2}s"
+}
+
+time_since_update() {
+  local last_timestamp
+  last_timestamp=$(<logs/last_update.txt)
+
+  local total_seconds=$(( $(date "+%s") - last_timestamp ))
+
+  local days=$((total_seconds / 86400))
+  local hours=$(( (total_seconds % 86400) / 3600 ))
+  local minutes=$(( (total_seconds % 3600) / 60 ))
+  local seconds=$((total_seconds % 60 ))
+
+  if (( days >= 2 )); then
+      echo "$(plural "$days" "day") ago"
+  elif (( days == 1 )); then
+      if (( hours > 0 )); then
+          echo "1 day and $(plural "$hours" "hour") ago"
+      else
+          echo "1 day ago"
+      fi
+  elif (( hours >= 1 )); then
+      if (( minutes > 0 )); then
+          echo "$(plural "$hours" "hour") and $(plural "$minutes" "minute") ago"
+      else
+          echo "$(plural "$hours" "hour") ago"
+      fi
+  elif (( minutes >= 1 )); then
+      if (( seconds > 0 )); then
+          echo "$(plural "$minutes" "minute") and $(plural "$seconds" "second") ago"
+      else
+          echo "$(plural "$minutes" "minute") ago"
+      fi
+  else
+      echo "$(plural "$seconds" "second") ago"
+  fi
 }

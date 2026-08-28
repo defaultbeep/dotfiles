@@ -30,7 +30,7 @@ fi
 # brew bundle --file=~/Brewfile
 
 ls -A files > logs/files.txt
-echo $(date) > logs/last_update.txt
+date "+%s" > logs/last_update.txt
 
 
 echo "👾 Done! Restart your terminal (Run brew bundle if required)"
