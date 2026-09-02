@@ -17,7 +17,7 @@ cp -r files/. ~/.
 rm -f ~/.bash_profile
 rm -f ~/.profile
 
-echo "export DOTFILES_FOLDER="$(pwd) > ~/.env
+echo "export DOTFILES_FOLDER=\"$(pwd)\"" > ~/.env
 
 if [ ! -f ~/.aliases.private ]; then
   echo "# Your private aliases" > ~/.aliases.private
@@ -36,5 +36,23 @@ fi
 ls -A files > logs/files.txt
 date "+%s" > logs/last_update.txt
 
+read "REPLY?👾 Done! Restart terminal to see changes? [Y/n] "
 
-echo "👾 Done! Restart your terminal (Run brew bundle if required)"
+if [[ "$REPLY" == "" || "$REPLY" =~ ^[Yy]([Ee][Ss])?$ ]]; then
+  case "$TERM_PROGRAM" in
+    iTerm.app)
+      osascript -e 'tell application "iTerm2" to create window with default profile'
+      ;;
+    Apple_Terminal)
+      osascript -e 'tell application "Terminal" to do script ""'
+      ;;
+    *)
+      echo "⚠️  Couldn't detect your terminal application. \n    Please restart terminal manually.\n"
+      exit
+      ;;
+  esac
+
+  exit
+else
+  echo "👍  Continuing with the current terminal \n    (Restart to see changes when you can)\n"
+fi
