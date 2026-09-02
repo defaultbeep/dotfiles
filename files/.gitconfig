@@ -19,4 +19,5 @@
   bam     = "!source ~/.githelpers && delete_local_merged_branches"
   bamr    = "!source ~/.githelpers && delete_remote_merged_branches"
   s       = "status"
-
+[include]
+  path = ~/.gitconfig.private

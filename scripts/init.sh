@@ -27,6 +27,10 @@ if [ ! -f ~/.env.private ]; then
   echo "# Your private env vars" > ~/.env.private
 fi
 
+if [ ! -f ~/.gitconfig.private ]; then
+  echo "# Your private git config" > ~/.gitconfig.private
+fi
+
 # brew bundle --file=~/Brewfile
 
 ls -A files > logs/files.txt
