@@ -65,6 +65,11 @@ load-nvmrc
 export VISUAL=vim
 export EDITOR=$VISUAL
 
+# VS Code CLI
+if [[ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]]; then
+  path+=("/Applications/Visual Studio Code.app/Contents/Resources/app/bin")
+fi
+
 # Set autocomplete
 autoload -U compinit
 compinit
