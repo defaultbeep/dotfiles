@@ -12,17 +12,24 @@ done
 setopt promptsubst
 
 prompt_path() {
-  echo "%{$fg_bold[red]%}%1d%{$reset_color%}"
+  echo "%{$fg_bold[red]%}%1~%{$reset_color%}"
 }
 
 git_prompt_info() {
-  current_branch=$(git cb 2> /dev/null)
-  if [[ -n $current_branch ]]; then
-    echo "%{$fg_bold[green]%}[$current_branch]%{$reset_color%} "
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
+    current_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+
+    if [[ -n $current_branch ]]; then
+      if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
+        echo "%{$fg_bold[green]%}[$current_branch]%{$reset_color%}*"
+      else
+        echo "%{$fg_bold[green]%}[$current_branch]%{$reset_color%}"
+      fi
+    fi
   fi
 }
 
-PS1='* $(prompt_path) $(git_prompt_info) ~ '
+PS1='$(prompt_path)$(git_prompt_info) '
 
 # Set NVM dir
 

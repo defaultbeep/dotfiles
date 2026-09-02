@@ -6,7 +6,7 @@
   required = true
 [core]
   filemode = false
-  excludesfile = /Users/jonathangoodman/.gitignore_global
+  excludesfile = ~/.gitignore
 [credential]
   helper = osxkeychain
 [commit]
@@ -18,6 +18,5 @@
 [alias]
   bam     = "!source ~/.githelpers && delete_local_merged_branches"
   bamr    = "!source ~/.githelpers && delete_remote_merged_branches"
-  cb      = "rev-parse --abbrev-ref HEAD"
   s       = "status"
 
