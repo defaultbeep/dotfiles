@@ -1,37 +1,33 @@
 {
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.tabs.defaultColor": "terminal.ansiBlack",
-  "terminal.integrated.fontFamily": "Menlo",
-  "terminal.integrated.fontSize": 18,
-
   "workbench.colorCustomizations": {
-    "terminal.background": "#0B0E14",
-    "terminal.foreground": "#BFBDB6",
+    "terminal.background": "#F8F9FA",
+    "terminal.foreground": "#5C6166",
 
-    "terminalCursor.foreground": "#BFBDB6",
-    "terminalCursor.background": "#0B0E14",
+    "terminalCursor.foreground": "#5C6166",
+    "terminalCursor.background": "#F8F9FA",
 
-    "terminal.selectionBackground": "#1B3A5B",
+    "terminal.selectionBackground": "#D3E1F5",
 
-    "terminal.ansiBlack": "#1E232B",
-    "terminal.ansiRed": "#EA6C73",
-    "terminal.ansiGreen": "#7FD962",
-    "terminal.ansiYellow": "#F9AF4F",
-    "terminal.ansiBlue": "#53BDFA",
-    "terminal.ansiMagenta": "#CDA1FA",
-    "terminal.ansiCyan": "#90E1C6",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiRed": "#EA6C6D",
+    "terminal.ansiGreen": "#6CBF43",
+    "terminal.ansiYellow": "#ECA944",
+    "terminal.ansiBlue": "#3199E1",
+    "terminal.ansiMagenta": "#9E75C7",
+    "terminal.ansiCyan": "#46BA94",
     "terminal.ansiWhite": "#C7C7C7",
 
     "terminal.ansiBrightBlack": "#686868",
-    "terminal.ansiBrightRed": "#F07878",
-    "terminal.ansiBrightGreen": "#AAD94C",
-    "terminal.ansiBrightYellow": "#FFB454",
-    "terminal.ansiBrightBlue": "#59C2FF",
-    "terminal.ansiBrightMagenta": "#D2A6FF",
-    "terminal.ansiBrightCyan": "#95E6CB",
-    "terminal.ansiBrightWhite": "#FFFFFF"
+    "terminal.ansiBrightRed": "#F07171",
+    "terminal.ansiBrightGreen": "#86B300",
+    "terminal.ansiBrightYellow": "#F2AE45",
+    "terminal.ansiBrightBlue": "#399BE6",
+    "terminal.ansiBrightMagenta": "#A37ACC",
+    "terminal.ansiBrightCyan": "#4CBF99",
+    "terminal.ansiBrightWhite": "#D1D1D1"
   },
 
   "terminal.integrated.drawBoldTextInBrightColors": false,
-  "terminal.integrated.minimumContrastRatio": 1
+  "terminal.integrated.minimumContrastRatio": 1,
+  "workbench.colorTheme": "Light 2026"
 }
