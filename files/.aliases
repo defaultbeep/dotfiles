@@ -1,4 +1,5 @@
 alias la='list_aliases'
+alias ls='ls -G'
 alias ua='vim "$DOTFILES_FOLDER"/files/.aliases'
 alias upa='vim "~/.aliases.private'
 alias ue='vim "$DOTFILES_FOLDER"/files/.env'

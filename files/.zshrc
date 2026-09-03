@@ -2,6 +2,7 @@
 autoload -U colors
 colors
 export CLICOLOR=1
+export LSCOLORS="fxfxcxdxbxegedabagacad"
 
 # Import handy functions
 for filename in ~/.zsh/functions/*; do
@@ -12,7 +13,11 @@ done
 setopt promptsubst
 
 prompt_path() {
-  echo "%{$fg_bold[red]%}%1~%{$reset_color%}"
+  if [[ "$PWD" == "$HOME" ]]; then
+    echo "%{$fg_bold[blue]%}~%{$reset_color%}"
+  else
+    echo "%{$fg_bold[blue]%}~%{$reset_color%} ${PWD##*/}"
+  fi
 }
 
 git_prompt_info() {
@@ -21,9 +26,9 @@ git_prompt_info() {
 
     if [[ -n $current_branch ]]; then
       if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
-        echo "%{$fg_bold[green]%}[$current_branch]%{$reset_color%}*"
+        echo "[$current_branch]%{$fg_bold[blue]%}*%{$reset_color%}"
       else
-        echo "%{$fg_bold[green]%}[$current_branch]%{$reset_color%}"
+        echo "[$current_branch]"
       fi
     fi
   fi
