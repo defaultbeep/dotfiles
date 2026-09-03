@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 current_path=$PWD
 cd $DOTFILES_FOLDER
 while IFS="" read -r p || [ -n "$p" ]

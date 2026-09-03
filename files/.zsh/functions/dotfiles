@@ -2,14 +2,14 @@ update_dotfiles() {
   current_path=$PWD
   cd $DOTFILES_FOLDER
   echo "✨ Updating now (Last updated $(time_since_update))"
-  source scripts/init.sh
+  source scripts/init.zsh
   cd $current_path
 }
 
 clear_dotfiles() {
   current_path=$PWD
   cd $DOTFILES_FOLDER
-  source scripts/clear.sh
+  source scripts/clear.zsh
   cd $current_path
 }
 

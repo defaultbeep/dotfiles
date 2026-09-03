@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 current_dir=$(basename "$PWD")
 
 if [[ "$current_dir" != "dotfiles" ]]; then

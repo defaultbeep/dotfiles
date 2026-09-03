@@ -15,7 +15,7 @@ The only prerequisite is having [homebrew](https://brew.sh/) installed
 1. Install `homebrew`
 2. Clone the repo
 3. Navigate to `dotfiles/`
-4. Run `sh scripts/init.sh`
+4. Run `zsh scripts/init.zsh`
 5. Re-open your terminal
 
 # To update
