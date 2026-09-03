@@ -1,0 +1,37 @@
+{
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiBlack",
+  "terminal.integrated.fontFamily": "Menlo",
+  "terminal.integrated.fontSize": 18,
+
+  "workbench.colorCustomizations": {
+    "terminal.background": "#0B0E14",
+    "terminal.foreground": "#BFBDB6",
+
+    "terminalCursor.foreground": "#BFBDB6",
+    "terminalCursor.background": "#0B0E14",
+
+    "terminal.selectionBackground": "#1B3A5B",
+
+    "terminal.ansiBlack": "#1E232B",
+    "terminal.ansiRed": "#EA6C73",
+    "terminal.ansiGreen": "#7FD962",
+    "terminal.ansiYellow": "#F9AF4F",
+    "terminal.ansiBlue": "#53BDFA",
+    "terminal.ansiMagenta": "#CDA1FA",
+    "terminal.ansiCyan": "#90E1C6",
+    "terminal.ansiWhite": "#C7C7C7",
+
+    "terminal.ansiBrightBlack": "#686868",
+    "terminal.ansiBrightRed": "#F07878",
+    "terminal.ansiBrightGreen": "#AAD94C",
+    "terminal.ansiBrightYellow": "#FFB454",
+    "terminal.ansiBrightBlue": "#59C2FF",
+    "terminal.ansiBrightMagenta": "#D2A6FF",
+    "terminal.ansiBrightCyan": "#95E6CB",
+    "terminal.ansiBrightWhite": "#FFFFFF"
+  },
+
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "terminal.integrated.minimumContrastRatio": 1
+}
