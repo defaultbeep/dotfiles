@@ -17,14 +17,17 @@ The only prerequisite is having [homebrew](https://brew.sh/) installed
 3. Navigate to `dotfiles/`
 4. Run `zsh scripts/init.zsh`
 5. Re-open your terminal
+6. Run `brew bundle`
 
 # To update
 
 1. Make changes in `dotfiles/files`
 2. Run `update_dotfiles` or `udf`
 3. Re-open your terminal
+4. Run `brew bundle`
 
 # To clear (remove)
 
 1. Run `clear_dotfiles` or `cdf`
 2. Re-open your terminal
+3. Run `brew bundle`
